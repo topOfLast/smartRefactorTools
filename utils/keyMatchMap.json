@@ -1,0 +1,8 @@
+{
+    "border-color": "border",
+    "background-color": "bg",
+    "fill": ["fill", "text"],
+    "border": "border",
+    "background": "bg",
+    "color": "text"
+}

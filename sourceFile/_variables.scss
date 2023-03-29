@@ -1,0 +1,147 @@
+/* 05.11颜色调整*/
+/* Green */
+$green-light: #e3f1de;
+$green-disable: #b5daa6;
+$green-primary: #45a321;
+$green-text: #1d8820;
+$green-text-hover: #1c6606;
+$green-text-clicked: #0d4001;
+/* Border */
+$border-light: #dfe1e6;
+$border-normal: #bcc2cc;
+$border-dark: #8993a4;
+
+/* Bg */
+$bg-hover: rgba(179, 186, 197, 0.2);
+$bg-white: #ffffff;
+$bg-light: #fafbfc;
+$bg-normal: #f4f5f7;
+$bg-dark: #ebecf0;
+ /* 05.11新增 */
+ $bg-darker: #DFE1E6;
+ /* 05.11新增 */
+ $bg-tag: #6B778C;
+ /* 05.11新增 */
+ $bg-tooltip: #344563;
+
+/* Fill */
+$fill-hint: #bcc2cc;
+$fill-hover: #8993a4;
+$fill-normal: #495973;
+/* 05.11弃用 */
+$fill-dark: #344563;
+
+/* Text */
+$text-primary: #020a1a;
+$text-secondary: #495973;
+$text-hint: #8993a4;
+$text-disable: #bcc2cc;
+$text-white: #ffffff;
+/* Status-blue */
+$status-blue-primary: #1976d2;
+$status-blue-light: #DDEBF8;
+$status-blue-disable: #a3c8ed;
+/* 05.11修改色值 */
+$status-blue-hover: #1667B8;
+/* 05.11修改色值 */
+$status-blue-clicked: #13599E;
+
+/* Status-red */
+$status-red-primary: #d11a32;
+$status-red-light: #F8DDE0;
+$status-red-disable: #eda3ad;
+/* 05.11修改色值 */
+$status-red-hover: #B8172C;
+/* 05.11修改色值 */
+$status-red-clicked: #9E1426;
+
+/* Status-yellow */
+$status-yellow-primary: #dc7c08;
+$status-yellow-light: #FAECDA;
+$status-yellow-link: #f7f28d;
+$status-yellow-disable: #f1cb9c;
+/* 05.11新增 */
+$status-yellow-hover: #C26A05;
+/* 05.11新增 */
+$status-yellow-clicked: #A85604;
+
+/* Status-purple 05.11新增 */
+$status-purple-primary: #914AED;
+$status-purple-light: #E2D5ED;
+
+/* Status-spring 05.11新增*/
+$status-spring-primary: #27B4D1;
+$status-spring-light: #D4F0F6;
+
+/* Shadows */
+$shadow-light: 0px 2px 6px 0px rgba(0, 0, 0, 0.08),
+0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+$shadow-dark: 0px 3px 8px 0px rgba(0, 0, 0, 0.14),
+0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+/* fonts */
+$regular: Noto Sans SC;
+$bold: Noto Sans SC;
+
+/* text styles*/
+@mixin bold-16-24-h() {
+  font-family: $bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+@mixin regular-16-24-h() {
+  font-family: $regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+@mixin regular-14-20-h() {
+  font-family: $regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+@mixin regular-12-16-h() {
+  font-family: $regular;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+@mixin regular-14-24-h() {
+  font-family: $regular;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+@mixin bold-20-26-h() {
+  font-family: $bold;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0em;
+}
+
+@mixin bold-14-20-h() {
+  font-family: $bold;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+@mixin bold-14-24-h() {
+  font-family: $bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+@mixin bold-12-16-h() {
+  font-family: $bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0em;
+}

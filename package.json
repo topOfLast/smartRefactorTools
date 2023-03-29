@@ -1,0 +1,93 @@
+{
+    "name": "refactoring-tools",
+    "displayName": "Refactoring tools",
+    "description": "A refactoring tools for vue into vue3+TS",
+    "version": "0.0.1",
+    "publisher": "lidi",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Formatters",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "refactoring",
+        "vue",
+        "ts"
+    ],
+    "icon": "imgs/RefactoringTools.png",
+    "activationEvents": [
+        "onCommand:extension.RefactoringTools",
+        "*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "http://git.patsnap.com/lidi/refactoring-tools"
+    },
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.RefactoringTools",
+                "title": "Refactoring tools: Converts code To new"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.RefactoringTools",
+                "key": "Alt+z"
+            }
+        ],
+        "configuration": [
+            {
+                "title": "Refactoring Tools",
+                "properties": {
+                    "refactoring-tools.pre-prompt": {
+                        "type": "string",
+                        "default": "请将下面的代码转换为使用Vue3和TypeScript的语法:",
+                        "description": "输入能够被GPT识别的预置转换prompt。"
+                    },
+                    "refactoring-tools.open-ai-key": {
+                        "type": "string",
+                        "default": "",
+                        "description": "输入open ai的 API keys"
+                    },
+                    "refactoring-tools.proxy-host": {
+                        "type": "string",
+                        "default": "127.0.0.1",
+                        "description": "请输入代理服务器地址"
+                    },
+                    "refactoring-tools.proxy-port": {
+                        "type": "string",
+                        "default": "7890",
+                        "description": "请输入代理服务器端口号"
+                    },
+                    "refactoring-tools.proxy-protocol": {
+                        "type": "string",
+                        "default": "http",
+                        "description": "请输入代理协议"
+                    }
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "package": "vsce package -o ./dist/",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.32",
+        "@types/node": "^6.0.40",
+        "eslint": "^6.5.1",
+        "mocha": "^2.3.3",
+        "typescript": "^2.0.3",
+        "vsce": "^1.88.0",
+        "vscode": "^1.0.0"
+    },
+    "dependencies": {
+        "openai": "^3.2.1"
+    }
+}
