@@ -74,10 +74,11 @@ function getChat(prompt = '') {
   //   console.log('models:', res);
   // })
   
-  return openai.createCompletion({
-    model: "text-davinci-003",
-    prompt,
-    temperature: 0.2,
+  return openai.createChatCompletion({
+    "messages": [{role:'assistant', content: prompt}],
+    "model": "gpt-3.5-turbo",
+    "n": 1,
+    "temperature": 0.2,
   }, {
     proxy: {
       host: proxyHost,
@@ -85,10 +86,11 @@ function getChat(prompt = '') {
       protocol: proxyProtocol,
     }
   }).then(res => {
-    return _.get(res, 'data.choices[0].text', '');
+    return _.get(res, 'data.choices[0].message.content', '');
   }).catch(e => {
     const msg = _.get(e, 'message', 'request failed!');
-    vscode.window.showErrorMessage(`请求openAi失败: ${msg}`);
+    const errorContent = _.get(e, 'response.data.message', '');
+    vscode.window.showErrorMessage(`请求openAi失败: ${msg} - ${errorContent}`);
   });
 }
 
