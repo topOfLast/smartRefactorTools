@@ -2,7 +2,7 @@ const _ = require("lodash");
 const vscode = require("vscode");
 const { Configuration, OpenAIApi } = require("openai");
 
-let prePrompt = '请将下面的代码转换为使用Vue3和TypeScript的语法:';
+let prePrompt = '请将下面的代码转换为使用TypeScript的语法:';
 let openAiKey = '';
 let proxyHost = '127.0.0.1';
 let proxyPort = '7890';
